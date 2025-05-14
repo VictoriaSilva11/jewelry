@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+:root {
+  --fonte-principal: 'EB Garamond', serif;
+  --cor-texto: white;
+  --cor-fundo: #111111cf;
+  --cor-destaque: #f3efe9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: var(--cor-fundo);
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto);
+  overflow-x: hidden;
+}
+
+.topo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  z-index: 2;
+  background-color: white;
+}
+
+.logo {
+  font-size: 2.2rem;
+  color: var(--cor-fundo);
+  letter-spacing: 2px;
+}
+
+.menu {
+  margin-top: 10px;
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--cor-fundo);
+  font-size: 1rem;
+  transition: opacity 0.3s;
+}
+
+.menu a:hover {
+  opacity: 0.6;
+}
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.legenda-video {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: var(--cor-destaque);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.legenda-video h1 {
+  font-size: 2.5rem;
+}
+
+.joias {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background: white;
+}
+
+.card {
+  background-color: var(--cor-destaque);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  margin: 15px 0 5px;
+  color: var(--cor-fundo);
+}
+
+.card p {
+  margin-bottom: 15px;
+  color: var(--cor-fundo);
+}
+
+.destaque {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0;
+  background: #fff;
+}
+
+.coluna-esquerda, .coluna-direita {
+  flex: 1 1 50%;
+  text-align: center;
+  padding: 0;
+}
+
+.produto-img {
+  width: 20%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.modelo-img {
+  width: 80%;
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.preco {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .destaque {
+    flex-direction: column;
+  }
+
+  .coluna-esquerda, .coluna-direita {
+    flex: 1 1 100%;
+  }
+
+  .produto-img {
+    max-width: 80px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
